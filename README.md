@@ -60,7 +60,7 @@ To run the program the following tools are required to be installed on your mach
 Get the repo and cd into cowboys folder
 ```
 git clone git@github.com:aykhazanchi/distributed-cowboys.git
-cd cowboys
+cd distributed-cowboys
 ```
 
 Create Kind cluster
@@ -97,5 +97,13 @@ kubectl apply -f k8s/config.yaml,k8s/server.yaml,k8s/cowboys.yaml
 
 ## Cleanup
 
+```
+# Delete the K8s resources
 kubectl delete -f k8s/cowboys.yaml,k8s/server.yaml,k8s/config.yaml
+
+# Delete the cluster
 kind delete cluster -n dev
+
+# Delete the Docker images
+docker rmi server:1.0 && docker rmi cowboy:1.0
+```
