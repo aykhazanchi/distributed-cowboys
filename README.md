@@ -72,6 +72,8 @@ kubectl config set-context --current --namespace=cowboys
 
 Build the Docker images
 ```
+# Note: If you're running this on a different architecture machine than amd64 you will have to change the GOARCH=amd64 setting in both Dockerfiles
+
 docker build -t server:1.0 -f Dockerfile.server . 
 docker build -t cowboy:1.0 -f Dockerfile.cowboy .
 ```
