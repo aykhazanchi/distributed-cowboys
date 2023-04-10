@@ -1,0 +1,18 @@
+# syntax=docker/dockerfile:1
+
+FROM golang:1.19
+
+# Set destination for COPY
+WORKDIR /app
+
+# Get source code and go file
+COPY go.mod go.sum cowboy.go ./
+
+# Get dependencies
+RUN go mod download
+
+# Build cowboy binary
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o cowboy
+
+# Run the cowboy binary
+ENTRYPOINT [ "/app/cowboy" ]

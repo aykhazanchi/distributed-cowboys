@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cowboy-config
+data:
+  config.json: |
+    [
+      {
+        "name": "cowboy1",
+        "health": 10,
+        "damage": 2,
+        "is_alive": true,
+        "winner": ""
+      },
+      {
+        "name": "cowboy2",
+        "health": 10,
+        "damage": 3,
+        "is_alive": true,
+        "winner": ""
+      },
+      {
+        "name": "cowboy3",
+        "health": 10,
+        "damage": 1,
+        "is_alive": true,
+        "winner": ""
+      },
+      {
+        "name": "cowboy4",
+        "health": 10,
+        "damage": 2,
+        "is_alive": true,
+        "winner": ""
+      },
+      {
+        "name": "cowboy5",
+        "health": 10,
+        "damage": 1,
+        "is_alive": true,
+        "winner": ""
+      }
+    ]

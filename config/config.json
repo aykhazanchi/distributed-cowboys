@@ -1,0 +1,24 @@
+[
+    {
+      "name": "cowboy1",
+      "health": 10,
+      "damage": 2,
+      "is_alive": true,
+      "winner": ""
+    },
+    {
+      "name": "cowboy2",
+      "health": 10,
+      "damage": 3,
+      "is_alive": true,
+      "winner": ""
+    },
+    {
+      "name": "cowboy3",
+      "health": 10,
+      "damage": 1,
+      "is_alive": true,
+      "winner": ""
+    }
+  ]
+  
